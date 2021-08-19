@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #393939;
+}
+
+
+/* Tooltip */
+
+.tooltip {
+  display: block !important;
+  z-index: 10000;
+  font-size: 11px;
+}
+
+.tooltip .tooltip-inner {
+  background: black;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px 4px;
+  font-weight: 600;
+}
+
+.tooltip .tooltip-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  margin: 5px;
+  border-color: black;
+  z-index: 1;
+}
+
+.tooltip[x-placement^="top"] {
+  margin-bottom: 5px;
+}
+
+.tooltip[x-placement^="top"] .tooltip-arrow {
+  border-width: 5px 5px 0;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom-color: transparent !important;
+  bottom: -5px;
+  left: calc(50% - 5px);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tooltip[x-placement^="bottom"] {
+  margin-top: 5px;
+}
+
+.tooltip[x-placement^="bottom"] .tooltip-arrow {
+  border-width: 0 5px 5px;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  border-top-color: transparent !important;
+  top: -5px;
+  left: calc(50% - 5px);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.tooltip[x-placement^="right"] {
+  margin-left: 5px;
+}
+
+.tooltip[x-placement^="right"] .tooltip-arrow {
+  border-width: 5px 5px 5px 0;
+  border-left-color: transparent !important;
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+  left: -5px;
+  top: calc(50% - 5px);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tooltip[x-placement^="left"] {
+  margin-right: 5px;
+}
+
+.tooltip[x-placement^="left"] .tooltip-arrow {
+  border-width: 5px 0 5px 5px;
+  border-top-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom-color: transparent !important;
+  right: -5px;
+  top: calc(50% - 5px);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tooltip[aria-hidden='true'] {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.15s, visibility 0.15s;
+}
+
+.tooltip[aria-hidden='false'] {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+
+/* Status color code */
+.newStatusIcon {
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid #4576B9;
+  background-color: #4576B9;
+  box-shadow: 0 0 0 2px black inset;
+}
+
+.progressStatusIcon {
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid #E4DE75;
+  background-color: #E4DE75;
+  box-shadow: 0 0 0 2px black inset;
+}
+
+.approvedStatusIcon {
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid #98EB78;
+  background-color: #98EB78;
+  box-shadow: 0 0 0 2px black inset;
+}
+
+.reviewStatusIcon {
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid #4497AB;
+  background-color: #4497AB;
+  box-shadow: 0 0 0 2px black inset;
+}
+
+.onholdStatusIcon {
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid #B65F3F;
+  background-color: #B65F3F;
+  box-shadow: 0 0 0 2px black inset;
+}
+
+/* Tribute Container */
+.tribute-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  max-height: 300px;
+  max-width: 500px;
+  overflow: auto;
+  display: block;
+  z-index: 999999;
+}
+
+.tribute-container ul {
+  margin: 0;
+  margin-top: 2px;
+  padding: 0;
+  list-style: none;
+  background: #FFF;
+  min-width: 200px;
+}
+
+.tribute-container li {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+/* Text Area of Screen Detail page Comment Section*/
+.textArea{
+  background-color: #f6f6f6;
+  padding: 10px;
+  border: 0.5px solid #f6f6f6;
+}
+
+.textArea:focus{
+  outline: none;
+  border: 0.5px solid #989898;
+}
+
+[contentEditable=true]:empty:before {
+  content: attr(placeholder);
+  color: #666;
+}
+
+/* To make image center aligned on project detail page */
+.container_height {
+  height: 100vh;
+}

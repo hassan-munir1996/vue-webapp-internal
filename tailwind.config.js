@@ -1,0 +1,132 @@
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+
+        'topaz': '#1a99aa',
+        'black-two': '#393939',
+        'black-three': '#1f1f1f',
+        'cloudy-blue': '#bac1c9',
+        'mango': '#fd9738',
+        'blue-grey': '#7f8d9b',
+        'white': '#ffffff',
+        'white-two': '#d8d8d8',
+        'white-three': '#e7e7e7',
+        'white-five': '#d5d5d5',
+        'pale-grey': '#f9f9fb',
+        'light-periwinkle': '#dde1e5',
+        'charcoal-grey': '#33383e',
+        'dark-grey': '#1f2123',
+        'bluegreen': '#007180',
+        'dark-sky-blue': '#4a90e2',
+        'brownish-grey': '#666666',
+        'brownish-grey-two': '#5d5d5d',
+        'warm-grey': '#838383',
+        'warm-grey-two': '#919191',
+        'pale-grey-two': '#f3f3f4',
+        'bright-blue': '#006eff',
+        'medium-green': '#40ab3e',
+        'orange-yellow': '#feb413',
+        'dark-lime-green': '#6dd400',
+        'yellow-orange': 'f7b500',
+        'new': '#4576B9',
+        'progress': '#E4DE75',
+        'approve': '#98EB78',
+        'review': '#4497AB',
+        'onhold': '#B65F3F',
+
+        'savah-green': '#1a99aa',
+        'light-gray': '#e8ebee',
+        'check-green': '#5abd5c',
+        'check-gray': '#929292',
+        'heading-color-e': '#2b3035',
+        'input-bg-e': '#f5f6f7',
+        'input-label-e': '#a9a9a9',
+        'btn-border': '#e0e0e0',
+        'btn-color-non-active': '#647787',
+        'tab-text-color': '#8d8d8d',
+        'next-light-gray': '#707070',
+        'light-green': '#ccf0f4',
+        'gray-6': '#d8d8d8',
+      },
+      spacing: {
+        '7': '30px',
+        '14': '3.75rem',
+      },
+      fontSize: {
+        xs: '.75rem',
+        sm: '.875rem',
+        tiny: '.875rem',
+        base: '1rem',
+        lg: '1.125rem ', 
+        xl: '1.25rem',
+        '2xl': '1.5rem',
+        '3xl': '1.875rem',
+        '4xl': '2.25rem',
+        '5xl': '3rem',
+        '6xl': '4rem',
+        '7xl': '5rem',
+        '8xl': '6rem',
+      },
+      width: {
+        'max': 'max-content',
+      },
+      bottom: {
+        '-16': '-4rem',
+      },
+    },
+    boxShadow: {
+      xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
+      sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+      default: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+      md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+      lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+      xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+      '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+      '3xl': '0 0 15px -2px rgba(0,0,0,0.4)',
+      inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+      outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
+      focus: '0 0 0 3px rgba(66, 153, 225, 0.5)',
+      none: 'none',
+      custom: '0 8px 24px 0 rgba(0, 0, 0, 0.13)'
+    },
+    inset: {
+      '0': 0,
+      auto: 'auto',
+      '3': '3.5rem',
+      '4': '4rem',
+      '9': '9rem',
+      '10': '10rem',
+      '11': '11rem',
+      '12': '12rem',
+    },
+    maxHeight: {
+      '0': '0',
+      '1/4': '25%',
+      '1/2': '50%',
+      '3/4': '75%',
+      'full': '100%',
+      '80': '20rem',
+    }
+  },
+  variants: {},
+  plugins: [],
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true
+  },
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      './public/**/*.html',
+      './src/**/*.vue'
+    ],
+    options: {
+      whitelistPatterns: [
+        /-(leave|enter|appear)(|-(to|from|active))$/,
+        /^(?!(|.*?:)cursor-move).+-move$/,
+        /^router-link(|-exact)-active$/
+      ],
+    },
+  }
+}
